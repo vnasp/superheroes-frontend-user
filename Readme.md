@@ -3,9 +3,9 @@
 Bienvenido al repositorio de Super Héroe Magazine, un sitio web interactivo donde conocerás qué super héroe te corresponde en el multiverso o podrás buscar más info sobre alguno en específicol, gracias a la información proporcionada por la API de Superhero.
 
 ## Características 🌟
-- **Búsqueda de superhéroes por ID**:
-- **Visualización de nombre, género, raza e imagen del superhéroe**: 
-- **Gráfico de radar para ver las estadísticas del superhéroe.**
+- **Búsqueda de superhéroes por ID**
+- **Visualización de datos del superhéroe**
+- **Gráfico de radar para ver las estadísticas**
 - **Diseño Responsive**
 
 

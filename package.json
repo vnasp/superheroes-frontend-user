@@ -1,14 +1,17 @@
 {
   "name": "desafio_superheroes",
+  "homepage": "https://vnasp.github.io/superheroes-frontend-user",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d ."
   },
   "author": "Valentina Muñoz",
   "license": "ISC",
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "tailwindcss": "^3.4.3"
   }
 }
