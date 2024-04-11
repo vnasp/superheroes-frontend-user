@@ -18,7 +18,7 @@ Este proyecto está construido utilizando las siguientes tecnologías y bibliote
 - **jQuery**: Utilizado para simplificar la manipulación del DOM y el manejo de eventos.
 - **AJAX**: Para el consumo de la API SuperHero.
 - **Chart.js**: Para generar gráficos de radar que representan las estadísticas de los superhéroes.
-- **Para generar gráficos de radar que representan las estadísticas de los superhéroes.**: Para estilos rápidos y responsivos.
+- **TailwindCSS**: Para estilos rápidos y responsivos.
 
 ## Despliegue 🚀
 
