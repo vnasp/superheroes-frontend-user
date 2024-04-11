@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Valentina Muñoz" />
+    <meta name="description" content="Revista de Super Heróes Chilena" />
+    <meta name="keywords" content="heroes, comic, api super heroes" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link href="./assets/css/output.css" rel="stylesheet">
+    <title>Super Héroes | Revista Chilena</title>
+  </head>
+  <body>
+    <header class="mt-16 relative">
+      <nav
+        class="flex flex-col md:flex-row items-center justify-between text-white h-50 md:h-20 md:px-20 header__nav"
+      >
+        <div class="flex items-center -mt-16 md:-mt-7">
+          <a href="/"
+            ><img src="./assets/img/logo.png" alt="Logo Revista Super Héroes"
+          /></a>
+        </div>
+        <div class="flex-1">
+          <h1 class="text-xl lg:text-3xl text-white">
+            Tu revista chilena de Super Héroes
+          </h1>
+        </div>
+        <div class="flex items-center py-4">
+          <input
+            id="searchInput"
+            type="text"
+            class="input me-4"
+            placeholder="Busca tu superhéroe por ID"
+          />
+          <button id="searchButton" type="submit" class="btn h-12 text-white">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main flex justify-center items-center p-12">
+      <section id="default" class="text-white text-2xl">
+        <p>Escribe un número del 1 al 731 y descubre cuál super héroe eres</p>
+      </section>
+      <section id="searchResult" class="flex justify-center gap-10 text-black">
+        <article
+          class="card w-1/8 flex flex-col items-center gap-6"
+          style="background-color: #fecb3e"
+        >
+          <div
+            class="card__resume p-2 rounded-lg text-white text-center text-lg"
+          >
+            <p>ID</p>
+            <p id="superHeroeID" class="text-xl"></p>
+          </div>
+          <div
+            class="card__resume p-2 rounded-lg text-white text-center text-lg"
+          >
+            <p>Género</p>
+            <p id="superHeroeGender"></p>
+          </div>
+          <div
+            class="card__resume p-2 rounded-lg text-white text-center text-lg"
+          >
+            <p>Raza</p>
+            <p id="superHeroeRace"></p>
+          </div>
+          <div
+            class="card__resume p-2 rounded-lg text-white text-center text-lg"
+          >
+            <p>Equipo</p>
+            <p id="superHeroeTeam"></p>
+          </div>
+        </article>
+        <article class="card bg-white w-1/4 flex flex-col">
+          <div class="h-80 overflow-hidden">
+            <img id="superHeroeImage" src="" alt="" class="object-cover" />
+          </div>
+          <div>
+            <h2 id="superHeroeName" class="text-2xl"></h2>
+            <p id="superHeroeDesc"></p>
+          </div>
+        </article>
+
+        <article class="card bg-white w-1/3">
+          <h2 class="text-2xl text-center">
+            Características de <span id="superHeroeGraphName"></span>
+          </h2>
+          <p id="superHeroeNoStats" class="text-center"></p>
+          <canvas id="superHeroeStats"></canvas>
+        </article>
+      </section>
+    </main>
+    <footer class="footer text-center text-white py-4 mb-8 text-sm">
+      <span id="year"></span> - SuperHéroes
+      <p>Todos los derechos reservados</p>
+    </footer>
+  </body>
+</html>
