@@ -26,7 +26,7 @@ function busquedaHeroe() {
 
 function consumirAPI(id_heroe) {
   // Datos API
-  const API_URL = "https://superheroapi.com/api/";
+  const API_URL = "https://superheroapi.com/api.php/";
   const TOKEN = "4905856019427443";
 
   $.ajax({
