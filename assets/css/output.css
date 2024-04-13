@@ -1005,6 +1005,10 @@ h3 {
     width: auto;
   }
 
+  .lg\:w-2\/3 {
+    width: 66.666667%;
+  }
+
   .lg\:flex-row {
     flex-direction: row;
   }
