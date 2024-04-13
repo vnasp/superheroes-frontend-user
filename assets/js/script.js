@@ -1,6 +1,7 @@
 $(document).ready(function () {
-  // Inicio con el div de resultados oculto
+  // Inicio con el div de resultados y alerta oculto
   $("#searchResult").hide();
+  $("#alert").hide();
   busquedaHeroe();
 
   // Año en el footer
@@ -16,10 +17,12 @@ function busquedaHeroe() {
 
     // Primero valido si no es número o si está fuera del rango y vacío el input
     if (!$.isNumeric(id_heroe) || id_heroe < 1 || id_heroe > 731) {
-      alert("Por favor, ingresa un número válido del 1 al 731.");
+      $("#default,#searchResult").hide();
+      $("#alert").show();
       $("#searchInput").val("");
     } else {
       consumirAPI(id_heroe);
+      $("#alert").hide();
     }
   });
 }
@@ -55,13 +58,13 @@ function mostrarHeroe(data) {
   $("#superHeroeName, #superHeroeGraphName").text(data.name);
   $("#superHeroeImage").attr("src", data.image.url);
   $("#superHeroeImage").attr("alt", data.name);
-  $("#superHeroeDesc").text(
-    "También conocido como " +
-      data.biography.aliases +
-      ". Su primera aparición fue en " +
-      data.biography["first-appearance"] +
-      "."
-  );
+  if (data.biography.aliases[0] === "-") {
+    $("#superHeroeAlias").text("No tiene ningún alias conocido.");
+  } else {
+    $("#superHeroeAlias").text("También conocido como " + data.biography.aliases.join(", ") + ".");
+  }
+
+  $("#superHeroePublish").text(" Su primera aparición fue en " + data.biography["first-appearance"]);
   $("#superHeroeID").text(data.id);
 
   if (data.appearance.gender === "Female") {
@@ -110,7 +113,7 @@ function mostrarGrafico(statsLabels, statsValues) {
   // Si el personaje no tiene stats, que de un mensaje
   if (statsValues.some(isNaN)) {
     $("#superHeroeNoStats").text(
-      "Este personaje no tiene stats para graficar."
+      "Este personaje no tiene stats para graficar"
     );
   }
 

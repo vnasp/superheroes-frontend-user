@@ -6,7 +6,7 @@
     <meta name="author" content="Valentina Muñoz" />
     <meta name="description" content="Revista de Super Heróes Chilena" />
     <meta name="keywords" content="heroes, comic, api super heroes" />
-    
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script defer src="./assets/js/script.js"></script>
 
@@ -25,7 +25,7 @@
       crossorigin="anonymous"
     />
 
-    <link href="./assets/css/output.css" rel="stylesheet">
+    <link href="./assets/css/output.css" rel="stylesheet" />
     <title>Super Héroes | Revista Chilena</title>
   </head>
   <body>
@@ -57,50 +57,33 @@
       </nav>
     </header>
 
-    <main class="main flex justify-center items-center p-12">
-      <section id="default" class="text-white text-2xl">
-        <p>Escribe un número del 1 al 731 y descubre cuál super héroe eres</p>
+    <main class="main flex justify-center items-center">
+      <section id="default" class="main__magazine relative flex flex-col justify-center items-center">
+        <div class="main__magazine--img absolute"></div>
+        <div class="main__magazine--img absolute flex flex-col justify-center text-center -rotate-3 z-10 hover:rotate-12">
+          <p class="text-xs font-semibold uppercase pt-12">En esta edición</p>
+          <h2 class="text-2xl text-blue-400">Descubre tu Super Héroe</h2>
+          <p class="text-xl">Escribe un n° del 1 al 731</p>
+          <h3 class="text-5xl text-yellow-400">en el buscador</h3>
+        </div>
       </section>
-      <section id="searchResult" class="flex justify-center gap-10 text-black">
-        <article
-          class="card w-1/8 flex flex-col items-center gap-6"
-          style="background-color: #fecb3e"
-        >
-          <div
-            class="card__resume p-2 rounded-lg text-white text-center text-lg"
-          >
-            <p>ID</p>
-            <p id="superHeroeID" class="text-xl"></p>
-          </div>
-          <div
-            class="card__resume p-2 rounded-lg text-white text-center text-lg"
-          >
-            <p>Género</p>
-            <p id="superHeroeGender"></p>
-          </div>
-          <div
-            class="card__resume p-2 rounded-lg text-white text-center text-lg"
-          >
-            <p>Raza</p>
-            <p id="superHeroeRace"></p>
-          </div>
-          <div
-            class="card__resume p-2 rounded-lg text-white text-center text-lg"
-          >
-            <p>Equipo</p>
-            <p id="superHeroeTeam"></p>
-          </div>
-        </article>
+      <section id="alert" class="tooltip p-20 rotate-6 text-centerm py-10">
+        <h3 class="text-5xl">¡Atención Super Héroe!</h3>
+        <p>
+          Debes ingresar un número del <span class="text-xl">1</span> al
+          <span class="text-xl">731</span>
+        </p>
+      </section>
+      <section id="searchResult" class="flex justify-center gap-10 text-black py-10">
         <article class="card bg-white w-1/4 flex flex-col">
           <div class="h-80 overflow-hidden">
             <img id="superHeroeImage" src="" alt="" class="object-cover" />
           </div>
           <div>
-            <h2 id="superHeroeName" class="text-2xl"></h2>
-            <p id="superHeroeDesc"></p>
+            <h2 id="superHeroeName" class="text-2xl py-4 text-center"></h2>
+            <p><span id="superHeroeAlias"></span><span id="superHeroePublish"></span></p>
           </div>
         </article>
-
         <article class="card bg-white w-1/3">
           <h2 class="text-2xl text-center">
             Características de <span id="superHeroeGraphName"></span>
@@ -108,8 +91,43 @@
           <p id="superHeroeNoStats" class="text-center"></p>
           <canvas id="superHeroeStats"></canvas>
         </article>
+        <article
+          class="card w-1/8 flex flex-col items-center gap-6"
+          style="background-color: #fecb3e"
+        >
+          <div
+            class="card__resume p-2 rounded-lg text-white text-center text-lg"
+          >
+            <h3>ID</h3>
+            <p id="superHeroeID" class="text-xl"></p>
+          </div>
+          <div
+            class="card__resume p-2 rounded-lg text-white text-center text-lg"
+          >
+            <h3>Género</h3>
+            <p id="superHeroeGender"></p>
+          </div>
+          <div
+            class="card__resume p-2 rounded-lg text-white text-center text-lg"
+          >
+            <h3>Raza</h3>
+            <p id="superHeroeRace"></p>
+          </div>
+          <div
+            class="card__resume p-2 rounded-lg text-white text-center text-lg"
+          >
+            <h3>Equipo</h3>
+            <p id="superHeroeTeam"></p>
+          </div>
+          <div
+            class="p-2 rounded-lg text-center"
+          >
+            <img src="./assets/img/logo.png" width="100px" alt="Logo SuperHeroe">
+          </div>
+        </article>
       </section>
     </main>
+
     <footer class="footer text-center text-white py-4 mb-8 text-sm">
       <span id="year"></span> - SuperHéroes
       <p>Todos los derechos reservados</p>
