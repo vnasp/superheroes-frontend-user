@@ -39,7 +39,7 @@
           /></a>
         </div>
         <div class="flex-1">
-          <h1 class="text-xl lg:text-3xl text-white">
+          <h1 class="text-xl lg:text-3xl md:hidden lg:block text-white">
             Tu revista chilena de Super Héroes
           </h1>
         </div>
@@ -57,10 +57,10 @@
       </nav>
     </header>
 
-    <main class="main flex justify-center items-center">
+    <main class="main flex justify-center items-center px-10">
       <section id="default" class="main__magazine relative flex flex-col justify-center items-center">
-        <div class="main__magazine--img absolute"></div>
-        <div class="main__magazine--img absolute flex flex-col justify-center text-center -rotate-3 z-10 hover:rotate-12">
+        <div class="main__magazine--img absolute z-10 rotate-3 "></div>
+        <div class="main__magazine--img relative z-20 -rotate-3 hover:rotate-12 flex flex-col justify-center items-center">
           <p class="text-xs font-semibold uppercase pt-12">En esta edición</p>
           <h2 class="text-2xl text-blue-400">Descubre tu Super Héroe</h2>
           <p class="text-xl">Escribe un n° del 1 al 731</p>
@@ -74,30 +74,29 @@
           <span class="text-xl">731</span>
         </p>
       </section>
-      <section id="searchResult" class="flex justify-center gap-10 text-black py-10">
-        <article class="card bg-white w-1/4 flex flex-col">
-          <div class="h-80 overflow-hidden">
-            <img id="superHeroeImage" src="" alt="" class="object-cover" />
-          </div>
-          <div>
-            <h2 id="superHeroeName" class="text-2xl py-4 text-center"></h2>
-            <p><span id="superHeroeAlias"></span><span id="superHeroePublish"></span></p>
-          </div>
-        </article>
-        <article class="card bg-white w-1/3">
-          <h2 class="text-2xl text-center">
-            Características de <span id="superHeroeGraphName"></span>
-          </h2>
-          <p id="superHeroeNoStats" class="text-center"></p>
-          <canvas id="superHeroeStats"></canvas>
-        </article>
-        <article
-          class="card w-1/8 flex flex-col items-center gap-6"
-          style="background-color: #fecb3e"
-        >
+      <section id="searchResult" class="flex flex-col lg:flex-row justify-center text-black py-10">
+        <div class="flex flex-col md:flex-row">
+          <article class="card bg-white lg:w-1/4 flex flex-col">
+            <div class="h-80 overflow-hidden">
+              <img id="superHeroeImage" src="" alt="" class="object-cover" />
+            </div>
+            <div>
+              <h2 id="superHeroeName" class="text-2xl py-4 text-center"></h2>
+              <p><span id="superHeroeAlias"></span><span id="superHeroePublish"></span></p>
+            </div>
+          </article>
+          <article class="card bg-white lg:w-1/3 flex flex-col">
+            <h2 class="text-2xl text-center">
+              Características de <span id="superHeroeGraphName"></span>
+            </h2>
+            <p id="superHeroeNoStats" class="text-center"></p>
+            <canvas id="superHeroeStats"></canvas>
+          </article>
+        </div>
+        <article class="card lg:w-auto flex flex-col items-center gap-6 bg-[#fecb3e]">
           <div
-            class="card__resume p-2 rounded-lg text-white text-center text-lg"
-          >
+          class="card__resume p-2 rounded-lg text-white text-center text-lg"
+        >
             <h3>ID</h3>
             <p id="superHeroeID" class="text-xl"></p>
           </div>
