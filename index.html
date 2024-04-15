@@ -35,9 +35,9 @@
         class="flex flex-col md:flex-row items-center justify-between text-white h-50 md:h-20 md:px-20 header__nav"
       >
         <div class="flex items-center -mt-16 md:-mt-7">
-          <a href="/"
-            ><img src="./assets/img/logo.png" alt="Logo Revista Super Héroes"
-          /></a>
+          <a href="#" id="logoLink">
+            <img src="./assets/img/logo.png" alt="Logo Revista Super Héroes" />
+        </a>
         </div>
         <div class="flex-1">
           <h1 class="text-xl lg:text-3xl md:hidden lg:block text-white">
@@ -45,16 +45,19 @@
           </h1>
         </div>
         <div class="flex items-center py-4">
-          <input
-            id="searchInput"
-            type="text"
-            class="input me-4"
-            placeholder="Busca tu superhéroe por ID"
-          />
+          <div class="flex items-center mr-4 gap-4">
+              <label class="mr-2">
+                  <input type="radio" name="searchType" value="id" checked> Por ID
+              </label>
+              <label>
+                  <input type="radio" name="searchType" value="name"> Por Nombre
+              </label>
+          </div>
+          <input id="searchInput" type="text" class="input me-4" placeholder="Busca tu superhéroe">
           <button id="searchButton" type="submit" class="btn h-12 text-white">
-            <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fa-solid fa-magnifying-glass"></i>
           </button>
-        </div>
+      </div>
       </nav>
     </header>
 
