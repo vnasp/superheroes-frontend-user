@@ -6,7 +6,7 @@ $(document).ready(function () {
 
   // Volver al inicio
   $('#logoLink').click(function() {
-    $('#searchResult').hide();
+    $("#searchResult,#alert").hide();
     $('#default').show();
 });
 
