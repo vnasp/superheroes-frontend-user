@@ -4,6 +4,14 @@ $(document).ready(function () {
   $("#alert").hide();
   busquedaHeroe();
 
+  // Volver al inicio
+  $('#logoLink').click(function(e) {
+    $('#searchResult').hide();
+
+    // Muestra el div predeterminado
+    $('#default').show();
+});
+
   // Año en el footer
   const currentYear = new Date().getFullYear();
   $("#year").text(currentYear);
