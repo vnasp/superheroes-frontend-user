@@ -26,7 +26,12 @@
     />
 
     <link href="./assets/css/output.css" rel="stylesheet" />
-    <link type="image/png" sizes="16x16" rel="icon" href="./assets/img/favicon.png">
+    <link
+      type="image/png"
+      sizes="16x16"
+      rel="icon"
+      href="./assets/img/favicon.png"
+    />
     <title>Super Héroes | Revista Chilena</title>
   </head>
   <body>
@@ -37,7 +42,7 @@
         <div class="flex items-center -mt-16 md:-mt-7">
           <a href="#" id="logoLink">
             <img src="./assets/img/logo.png" alt="Logo Revista Super Héroes" />
-        </a>
+          </a>
         </div>
         <div class="flex-1">
           <h1 class="text-xl lg:text-3xl md:hidden lg:block text-white">
@@ -45,26 +50,28 @@
           </h1>
         </div>
         <div class="flex items-center py-4">
-          <div class="flex items-center mr-4 gap-4">
-              <label class="mr-2">
-                  <input type="radio" name="searchType" value="id" checked> Por ID
-              </label>
-              <label>
-                  <input type="radio" name="searchType" value="name"> Por Nombre
-              </label>
-          </div>
-          <input id="searchInput" type="text" class="input me-4" placeholder="Busca tu superhéroe">
+          <input
+            id="searchInput"
+            type="text"
+            class="input me-4"
+            placeholder="Busca tu superhéroe por ID"
+          />
           <button id="searchButton" type="submit" class="btn h-12 text-white">
-              <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
           </button>
-      </div>
+        </div>
       </nav>
     </header>
 
     <main class="main flex justify-center items-center px-10">
-      <section id="default" class="main__magazine relative flex flex-col justify-center items-center">
-        <div class="main__magazine--img absolute z-10 rotate-3 "></div>
-        <div class="main__magazine--img relative z-20 -rotate-3 hover:rotate-12 flex flex-col justify-center items-center">
+      <section
+        id="default"
+        class="main__magazine relative flex flex-col justify-center items-center"
+      >
+        <div class="main__magazine--img absolute z-10 rotate-3"></div>
+        <div
+          class="main__magazine--img relative z-20 -rotate-3 hover:rotate-12 flex flex-col justify-center items-center"
+        >
           <p class="text-xs font-semibold uppercase pt-12">En esta edición</p>
           <h2 class="text-2xl text-blue-400">Descubre tu Super Héroe</h2>
           <p class="text-xl">Escribe un n° del 1 al 731</p>
@@ -78,7 +85,10 @@
           <span class="text-xl">731</span>
         </p>
       </section>
-      <section id="searchResult" class="flex flex-col lg:flex-row justify-center text-black py-10">
+      <section
+        id="searchResult"
+        class="flex flex-col lg:flex-row justify-center text-black py-10"
+      >
         <div class="flex flex-col md:flex-row lg:w-2/3">
           <article class="card bg-white lg:w-1/2 flex flex-col">
             <div class="h-80 overflow-hidden">
@@ -86,7 +96,10 @@
             </div>
             <div>
               <h2 id="superHeroeName" class="text-2xl py-4 text-center"></h2>
-              <p><span id="superHeroeAlias"></span><span id="superHeroePublish"></span></p>
+              <p>
+                <span id="superHeroeAlias"></span
+                ><span id="superHeroePublish"></span>
+              </p>
             </div>
           </article>
           <article class="card bg-white lg:w-1/2 flex flex-col">
@@ -97,10 +110,12 @@
             <canvas id="superHeroeStats"></canvas>
           </article>
         </div>
-        <article class="card lg:w-auto flex flex-col items-center gap-6 bg-[#fecb3e]">
-          <div
-          class="card__resume p-2 rounded-lg text-white text-center text-lg"
+        <article
+          class="card lg:w-auto flex flex-col items-center gap-6 bg-[#fecb3e]"
         >
+          <div
+            class="card__resume p-2 rounded-lg text-white text-center text-lg"
+          >
             <h3>ID</h3>
             <p id="superHeroeID" class="text-xl"></p>
           </div>
@@ -122,21 +137,39 @@
             <h3>Equipo</h3>
             <p id="superHeroeTeam"></p>
           </div>
-          <div
-            class="p-2 rounded-lg text-center"
-          >
-            <img src="./assets/img/logo.png" width="100px" alt="Logo SuperHeroe">
+          <div class="p-2 rounded-lg text-center">
+            <img
+              src="./assets/img/logo.png"
+              width="100px"
+              alt="Logo SuperHeroe"
+            />
           </div>
         </article>
       </section>
     </main>
-    <footer class="footer flex flex-col justify-between items-center lg:flex-row lg:px-20 text-white py-4 mb-8 text-sm">
+    <footer
+      class="footer flex flex-col justify-between items-center lg:flex-row lg:px-20 text-white py-4 mb-8 text-sm"
+    >
       <p>© <span id="year"></span> Valentina Muñoz</p>
       <p>
-        Sitio creado con <a href="https://www.w3.org/html/"  target="_blank" rel="noopener noreferrer">HTML</a>, 
-        <a href="https://tailwindcss.com/"  target="_blank" rel="noopener noreferrer">TailwindCSS</a> y 
-        <a href="https://jquery.com/"  target="_blank" rel="noopener noreferrer">jQuery</a>
+        Sitio creado con
+        <a
+          href="https://www.w3.org/html/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >HTML</a
+        >,
+        <a
+          href="https://tailwindcss.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >TailwindCSS</a
+        >
+        y
+        <a href="https://jquery.com/" target="_blank" rel="noopener noreferrer"
+          >jQuery</a
+        >
       </p>
-  </footer>
+    </footer>
   </body>
 </html>
