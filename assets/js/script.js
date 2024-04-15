@@ -5,10 +5,8 @@ $(document).ready(function () {
   busquedaHeroe();
 
   // Volver al inicio
-  $('#logoLink').click(function(e) {
+  $('#logoLink').click(function() {
     $('#searchResult').hide();
-
-    // Muestra el div predeterminado
     $('#default').show();
 });
 
